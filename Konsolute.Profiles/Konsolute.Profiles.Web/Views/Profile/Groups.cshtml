@@ -5,10 +5,28 @@
 }
 
 <div class="container">
-    <div class="col-md-12">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i> <a href="/profile/list">Back to Profiles</a>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="col-md-4">
+                <div class="text-left">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> <a href="/profile/list">Back to Profiles</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text-right" id="dmsg">
+                    <div id="stxt" class="isa_success">
+                        <i class="fa fa-check"></i>
+                        Successfully synced group members.
+                    </div>
+                    <div id="etxt" class="isa_error">
+                        <i class="fa fa-times-circle"></i>
+                        Error while syncing group members.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-10">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -33,15 +51,29 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function () {
+            $("#stxt").hide();
+            $("#etxt").hide();
+
             $("#btnSync").click(function () {
                 $('#pModal').modal('show');
                 var gid = $(this).attr('gid');
-                $.post(
-                    '/Profile/SyncProfiles?groupId=' + gid,
-                    function (data) {
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'text',
+                    data: '',
+                    url: '/Profile/SyncProfiles?groupId=' + gid,
+                    success: function (data, textStatus) {
                         $('#pModal').modal('hide');
-                    });
-
+                        $("#stxt").show();
+                        $("#etxt").hide();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        $('#pModal').modal('hide');
+                        $("#stxt").hide();
+                        $("#etxt").show();
+                        console.log(xhr);
+                    }
+                });
             });
         });
     </script>
