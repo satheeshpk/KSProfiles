@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bb9b62fb-20e3-4fa2-8583-876f1f913e12" solutionId="bb9b62fb-20e3-4fa2-8583-876f1f913e12" resetWebServer="false" sharePointProductVersion="15.0" name="Konsolute.Profiles.App" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="80a1a243-50bd-4a4f-aab9-51dbda28220c" />
+  </features>
+</package>

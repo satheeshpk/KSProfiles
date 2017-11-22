@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="bb9b62fb-20e3-4fa2-8583-876f1f913e12" SharePointProductVersion="15.0">
+  <FeatureManifests>
+    <FeatureManifest Location="Konsolute.Profiles.App_ProfilesManagement\Feature.xml" />
+  </FeatureManifests>
+</Solution>

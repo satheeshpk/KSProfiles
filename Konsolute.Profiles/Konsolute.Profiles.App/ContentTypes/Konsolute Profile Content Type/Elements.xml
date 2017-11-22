@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100E1733DA6B75B4A83947DD753CF986626" Name="Konsolute Profile Content Type" Group="Konsolute Content Types" Description="Konsolute Profile Content type" Inherits="FALSE" Hidden="TRUE">
+    <FieldRefs>
+      <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{FC50823C-9F44-4396-B456-B36D4F6ACD43}" DisplayName="Object ID" Required="TRUE" Hidden="TRUE" Name="KSLProfileObjectID" ShowInDisplayForm="FALSE" />
+      <FieldRef ID="{9950C703-A6DB-49CC-9C3F-6FE5B6564930}" DisplayName="Display Name" Required="TRUE" Name="KSLProfileDisplayName" />
+      <FieldRef ID="{C6B76F70-E5FB-44EB-A9C7-887B987EAF7E}" DisplayName="First Name" Required="TRUE" Name="KSLProfileFirstName" />
+      <FieldRef ID="{3B6CCE4D-1372-4485-B390-5A20047D25B6}" DisplayName="Last Name" Required="TRUE" Name="KSLProfileLastName" />
+      <FieldRef ID="{C6214D01-7CDC-4B6E-9C55-61D9E3DD0680}" DisplayName="Email Address" Required="TRUE" Name="KSLProfileEmail" />
+      <FieldRef ID="{1C7507A4-11BF-44C7-A341-0AF8EFD2A1FF}" DisplayName="Department" Name="KSLProfileDepartment" Required="FALSE" />
+      <FieldRef ID="{A48BC8E3-7E45-4C66-9AB4-CBFD705B47D2}" DisplayName="KSLProfileDepartment_0" Required="FALSE" Hidden="TRUE" Name="KSLProfileDepartment_0" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

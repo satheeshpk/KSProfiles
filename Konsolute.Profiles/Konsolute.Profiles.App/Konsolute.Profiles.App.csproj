@@ -1,0 +1,113 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CD77055-F5A1-4279-A7E1-09B04C328C83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Konsolute.Profiles.App</RootNamespace>
+    <AssemblyName>Konsolute.Profiles.App</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{c807755b-1bbc-4ee3-a476-cdcd3386ecbc}</AppFeaturePartId>
+    <WspPartId>{3e553271-b1d0-4af5-9ae8-42cf0e47cecb}</WspPartId>
+    <WorkflowPartId>{a22939d9-f114-4a22-96b1-57bcf20f512d}</WorkflowPartId>
+    <CspkgPartId>{b4057fca-ec0a-4864-80e0-e8c605ee1019}</CspkgPartId>
+    <SqlPackagePartId>{12f32d06-3332-4435-b327-d31558f1e024}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Features\ProfilesManagement\ProfilesManagement.Template.xml">
+      <DependentUpon>ProfilesManagement.feature</DependentUpon>
+    </Content>
+    <Content Include="ContentTypes\Konsolute Profile Content Type\Elements.xml" />
+    <Content Include="Lists\Konsolute Profiles\ProfileUpdateEventReceiver\Elements.xml" />
+    <Content Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </Content>
+    <Content Include="SiteColumns\Konsolute Profile SiteColumns\Elements.xml" />
+    <Content Include="Lists\Konsolute Profiles\Elements.xml" />
+    <Content Include="Lists\Konsolute Profiles\ProfilesInstance\Elements.xml" />
+    <Content Include="Lists\Konsolute Profiles\Schema.xml" />
+    <Content Include="WebParts\KonsoluteProfilesWebPart\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Features\ProfilesManagement\ProfilesManagement.feature">
+      <FeatureId>{80a1a243-50bd-4a4f-aab9-51dbda28220c}</FeatureId>
+    </None>
+    <None Include="ContentTypes\Konsolute Profile Content Type\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{84688943-7157-47be-9322-35c7a6bcd1b7}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Konsolute Profiles\ProfileUpdateEventReceiver\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b4f7c115-988e-41ba-8c5b-387ee561c01b}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{c9045e74-e105-419c-92d0-5dd78e7e07e2}</PackageId>
+    </None>
+    <None Include="SiteColumns\Konsolute Profile SiteColumns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{267199c7-fd09-4120-b1a8-7849b02e0c9d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Konsolute Profiles\ProfilesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b6dcaf45-c5c1-4743-876c-520535a05afc}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Konsolute Profiles\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{62f09e78-a8ec-4f81-9e9e-27dfc63c3d40}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\KonsoluteProfilesWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8f7504b2-e031-4c2c-8642-84d53653966c}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Konsolute.Profiles.Web\Konsolute.Profiles.Web.csproj">
+      <Project>{2115555F-E527-43E4-AE60-3EBC10706643}</Project>
+      <Name>Konsolute.Profiles.Web</Name>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <OutputItemType>SharePointWebProjectOutput</OutputItemType>
+      <RoleName>Konsolute.Profiles.Web</RoleName>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{FC50823C-9F44-4396-B456-B36D4F6ACD43}"
+       Name="KSLProfileObjectID"
+       DisplayName="Object ID"
+       Type="Text"
+       Required="TRUE"
+       Group="Konsolute Site Columns"
+       Hidden="TRUE"
+       ShowInDisplayForm="FALSE"
+       ShowInEditForm="FALSE"
+       ShowInNewForm="FALSE">
+  </Field>
+  <Field
+       ID="{9950C703-A6DB-49CC-9C3F-6FE5B6564930}"
+       Name="KSLProfileDisplayName"
+       DisplayName="Display Name"
+       Type="Text"
+       Required="TRUE"
+       ListItemMenu="TRUE"
+       ListItemMenuAllowed="Required"
+       Group="Konsolute Site Columns">
+  </Field>
+  <Field
+       ID="{C6B76F70-E5FB-44EB-A9C7-887B987EAF7E}"
+       Name="KSLProfileFirstName"
+       DisplayName="First Name"
+       Type="Text"
+       Required="TRUE"
+       Group="Konsolute Site Columns">
+  </Field>
+  <Field
+       ID="{3B6CCE4D-1372-4485-B390-5A20047D25B6}"
+       Name="KSLProfileLastName"
+       DisplayName="Last Name"
+       Type="Text"
+       Required="TRUE"
+       Group="Konsolute Site Columns">
+  </Field>
+  
+  <Field
+       ID="{C6214D01-7CDC-4B6E-9C55-61D9E3DD0680}"
+       Name="KSLProfileEmail"
+       DisplayName="Email Address"
+       Type="Text"
+       Required="TRUE"
+       Group="Konsolute Site Columns">
+  </Field>
+  <Field ID="{1C7507A4-11BF-44C7-A341-0AF8EFD2A1FF}"
+         Name="KSLProfileDepartment"
+         Type="TaxonomyFieldType"
+         DisplayName="Department"
+         ShowField="Term1033"
+         EnforceUniqueValues="FALSE"
+         Group="Konsolute Site Columns">
+    <Customization>
+      <ArrayOfProperty>
+        <Property>
+          <Name>TextField</Name>;
+          <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{A48BC8E3-7E45-4C66-9AB4-CBFD705B47D2}</Value>
+        </Property>
+      </ArrayOfProperty>
+    </Customization>
+  </Field>
+  <Field Type="Note"
+         Name="KSLProfileDepartment_0"
+         DisplayName="KSLProfileDepartment_0"
+         ID="{A48BC8E3-7E45-4C66-9AB4-CBFD705B47D2}"
+         ShowInViewForms="FALSE"
+         Required="FALSE"
+         Hidden="TRUE"
+         CanToggleHidden="TRUE"
+         Group="Konsolute Site Columns"
+         RowOrdinal="0"/>
+</Elements>

@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Profiles";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/Profiles.js"></script>
+<div class="container">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="col-md-8 input-group">
+                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="srch-button"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group pull-right">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <a href="/profile/groups">Sync Group Members</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="plist"></tbody>
+        </table>
+    </div>
+</div>
+
+<div id="eModal" class="modal modal-static fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="dname">Display Name:</label>
+                    <input type="text" class="form-control" id="dname">
+                </div>
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" class="form-control" id="fname">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" class="form-control" id="lname">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

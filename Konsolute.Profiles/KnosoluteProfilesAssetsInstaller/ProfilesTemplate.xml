@@ -1,0 +1,156 @@
+﻿<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.20.1711.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="ProfileManagementTemplates">
+    <pnp:ProvisioningTemplate ID="ProfileManagementTemplate"
+      Version="1">
+      <pnp:SiteFields>
+        <Field
+             ID="{FC50823C-9F44-4396-B456-B36D4F6ACD43}"
+             Name="KSLProfileObjectID"
+             DisplayName="Object ID"
+             Type="Text"
+             Required="TRUE"
+             Group="Konsolute Site Columns"
+             Hidden="TRUE"
+             ShowInDisplayForm="FALSE"
+             ShowInEditForm="FALSE"
+            ShowInNewForm="FALSE">
+        </Field>
+        <Field
+             ID="{9950C703-A6DB-49CC-9C3F-6FE5B6564930}"
+             Name="KSLProfileDisplayName"
+             DisplayName="Display Name"
+             Type="Text"
+             Required="TRUE"
+             ListItemMenu="TRUE"
+             ListItemMenuAllowed="Required"
+             Group="Konsolute Site Columns">
+        </Field>
+        <Field
+             ID="{C6B76F70-E5FB-44EB-A9C7-887B987EAF7E}"
+             Name="KSLProfileFirstName"
+             DisplayName="First Name"
+             Type="Text"
+             Required="TRUE"
+             Group="Konsolute Site Columns">
+        </Field>
+        <Field
+             ID="{3B6CCE4D-1372-4485-B390-5A20047D25B6}"
+             Name="KSLProfileLastName"
+             DisplayName="Last Name"
+             Type="Text"
+             Required="TRUE"
+             Group="Konsolute Site Columns">
+        </Field>
+
+        <Field
+             ID="{C6214D01-7CDC-4B6E-9C55-61D9E3DD0680}"
+             Name="KSLProfileEmail"
+             DisplayName="Email Address"
+             Type="Text"
+             Required="TRUE"
+             Group="Konsolute Site Columns">
+        </Field>
+        <Field Type="Note"
+              Name="KSLProfileDepartment_0"
+              DisplayName="KSLProfileDepartment_0"
+              ID="{A48BC8E3-7E45-4C66-9AB4-CBFD705B47D2}"
+              ShowInViewForms="FALSE"
+              Required="FALSE"
+              Hidden="TRUE"
+              CanToggleHidden="TRUE"
+              Group="Konsolute Site Columns"
+              RowOrdinal="0"/>
+        <Field ID="{1C7507A4-11BF-44C7-A341-0AF8EFD2A1FF}"
+               Name="KSLProfileDepartment"
+               Type="TaxonomyFieldType"
+               DisplayName="Department"
+               ShowField="Term1033"
+               EnforceUniqueValues="FALSE"
+               Group="Konsolute Site Columns">
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{deptermsetid}</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{A48BC8E3-7E45-4C66-9AB4-CBFD705B47D2}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+       
+      </pnp:SiteFields>
+
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x0100E1733DA6B75B4A83947DD753CF986626" Name="Konsolute Profile Content Type" Group="Konsolute Content Types" Description="Konsolute Profile Content type" Inherits="FALSE">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="{FC50823C-9F44-4396-B456-B36D4F6ACD43}" Required="true" Name="KSLProfileObjectID" />
+            <pnp:FieldRef ID="{9950C703-A6DB-49CC-9C3F-6FE5B6564930}" Required="true" Name="KSLProfileDisplayName" />
+            <pnp:FieldRef ID="{C6B76F70-E5FB-44EB-A9C7-887B987EAF7E}" Required="true" Name="KSLProfileFirstName" />
+            <pnp:FieldRef ID="{3B6CCE4D-1372-4485-B390-5A20047D25B6}" Required="true" Name="KSLProfileLastName" />
+            <pnp:FieldRef ID="{C6214D01-7CDC-4B6E-9C55-61D9E3DD0680}" Required="true" Name="KSLProfileEmail" />
+            <pnp:FieldRef ID="{1C7507A4-11BF-44C7-A341-0AF8EFD2A1FF}" Required="false" Name="KSLProfileDepartment" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+      </pnp:ContentTypes>
+
+      <pnp:Lists>
+        <pnp:ListInstance Title="Profiles" OnQuickLaunch="true" TemplateType="100" Url="Lists/Profiles"
+                          Description="Konsolute Profiles store" RemoveExistingContentTypes="true" EnableFolderCreation="false"
+                          Hidden="true">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0100E1733DA6B75B4A83947DD753CF986626" Default="true"/>
+          </pnp:ContentTypeBindings>
+            <pnp:Views>
+              <View Name="{4C9649A4-F892-4C9A-B81D-8F3A87817A55}" MobileView="TRUE" Type="HTML" DisplayName="All Profiles" Url="/sites/UProfiles/Lists/Profiles/All Profiles.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+                <Query/>
+                <ViewFields>
+                  <FieldRef Name="KSLProfileDisplayName"/>
+                  <FieldRef Name="KSLProfileFirstName"/>
+                  <FieldRef Name="KSLProfileLastName"/>
+                  <FieldRef Name="KSLProfileEmail"/>
+                  <FieldRef Name="KSLProfileDepartment"/>
+                </ViewFields>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Aggregations Value="Off"/>
+                <JSLink>clienttemplates.js</JSLink>
+                <XslLink Default="TRUE">main.xsl</XslLink><Toolbar Type="Standard"/>
+              </View>
+            </pnp:Views>
+        </pnp:ListInstance>
+      </pnp:Lists>
+
+      <pnp:TermGroups>
+        <pnp:TermGroup Name="Konsolute" ID="4F91D466-B2E3-4852-BDDC-D2D6F2343D9C">
+          <pnp:TermSets>
+            <pnp:TermSet Name="Departments" ID="B0281683-DA52-4FF9-A530-B1C418D589A7" Language="1033">
+              <pnp:Terms>
+                <pnp:Term Name="Finance" ID="93E9B6C2-EB13-4C83-8B21-AA25249BC68B">
+                </pnp:Term>
+                <pnp:Term Name="Information Technology" ID="B9945F6E-76F2-42C7-BDD8-3FEB22B5E5AE">
+                </pnp:Term>
+                <pnp:Term Name="Engineering" ID="2EA1240D-B173-42F9-84DA-1F494035DD18">
+                </pnp:Term>
+              </pnp:Terms>
+            </pnp:TermSet>
+          </pnp:TermSets>
+        </pnp:TermGroup>
+      </pnp:TermGroups>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

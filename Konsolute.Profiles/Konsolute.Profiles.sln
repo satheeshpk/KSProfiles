@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konsolute.Profiles.App", "Konsolute.Profiles.App\Konsolute.Profiles.App.csproj", "{4CD77055-F5A1-4279-A7E1-09B04C328C83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konsolute.Profiles.Core", "Konsolute.Profiles.Core\Konsolute.Profiles.Core.csproj", "{50B4CC54-93CE-421A-8981-CC4FA6276126}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konsolute.Profiles.AzureAD", "Konsolute.Profiles.AzureAD\Konsolute.Profiles.AzureAD.csproj", "{BB45904C-E530-43A9-9E8A-D560CE5D606F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure AD", "Azure AD", "{E040E6AE-B519-459B-981D-56A3519BABD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{947AB947-42EB-45E1-A668-ADA2361F215D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharePoint App", "SharePoint App", "{D3849E1A-3FFC-4ACB-BE64-EE3BBC6E6721}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{FA656461-124E-4325-BE7F-4DC07AB9DD25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konsolute.Profiles.Web", "Konsolute.Profiles.Web\Konsolute.Profiles.Web.csproj", "{2115555F-E527-43E4-AE60-3EBC10706643}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharePoint", "SharePoint", "{24C2D155-6178-4FBC-8137-4124BA312AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konsolute.Profiles.SharePoint", "Konsolute.Profiles.SharePoint\Konsolute.Profiles.SharePoint.csproj", "{9CC58EFD-D538-41B8-882F-51C5B1F3A6AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Installer", "Installer", "{BA524106-5C20-4A39-BEBB-68EEABC0E0D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnosoluteProfilesAssetsInstaller", "KnosoluteProfilesAssetsInstaller\KnosoluteProfilesAssetsInstaller.csproj", "{4A62870F-B62B-4753-A2B4-EB019E3C9B52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CD77055-F5A1-4279-A7E1-09B04C328C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD77055-F5A1-4279-A7E1-09B04C328C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD77055-F5A1-4279-A7E1-09B04C328C83}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CD77055-F5A1-4279-A7E1-09B04C328C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD77055-F5A1-4279-A7E1-09B04C328C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD77055-F5A1-4279-A7E1-09B04C328C83}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{50B4CC54-93CE-421A-8981-CC4FA6276126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B4CC54-93CE-421A-8981-CC4FA6276126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B4CC54-93CE-421A-8981-CC4FA6276126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B4CC54-93CE-421A-8981-CC4FA6276126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB45904C-E530-43A9-9E8A-D560CE5D606F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB45904C-E530-43A9-9E8A-D560CE5D606F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB45904C-E530-43A9-9E8A-D560CE5D606F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB45904C-E530-43A9-9E8A-D560CE5D606F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2115555F-E527-43E4-AE60-3EBC10706643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2115555F-E527-43E4-AE60-3EBC10706643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2115555F-E527-43E4-AE60-3EBC10706643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2115555F-E527-43E4-AE60-3EBC10706643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC58EFD-D538-41B8-882F-51C5B1F3A6AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC58EFD-D538-41B8-882F-51C5B1F3A6AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC58EFD-D538-41B8-882F-51C5B1F3A6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC58EFD-D538-41B8-882F-51C5B1F3A6AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A62870F-B62B-4753-A2B4-EB019E3C9B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A62870F-B62B-4753-A2B4-EB019E3C9B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A62870F-B62B-4753-A2B4-EB019E3C9B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A62870F-B62B-4753-A2B4-EB019E3C9B52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4CD77055-F5A1-4279-A7E1-09B04C328C83} = {D3849E1A-3FFC-4ACB-BE64-EE3BBC6E6721}
+		{50B4CC54-93CE-421A-8981-CC4FA6276126} = {947AB947-42EB-45E1-A668-ADA2361F215D}
+		{BB45904C-E530-43A9-9E8A-D560CE5D606F} = {E040E6AE-B519-459B-981D-56A3519BABD3}
+		{2115555F-E527-43E4-AE60-3EBC10706643} = {FA656461-124E-4325-BE7F-4DC07AB9DD25}
+		{9CC58EFD-D538-41B8-882F-51C5B1F3A6AE} = {24C2D155-6178-4FBC-8137-4124BA312AAE}
+		{4A62870F-B62B-4753-A2B4-EB019E3C9B52} = {BA524106-5C20-4A39-BEBB-68EEABC0E0D3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {462F7874-9784-4147-91E4-D883C3389732}
+	EndGlobalSection
+EndGlobal

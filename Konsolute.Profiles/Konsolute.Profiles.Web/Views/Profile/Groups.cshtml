@@ -1,0 +1,57 @@
+﻿@model IList<Konsolute.Profiles.Core.Models.GroupInfo>
+
+@{
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Group Name</th>
+                    <th>Sync</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var group in Model)
+            {
+                    <tr>
+                        <td>
+                            @group.GroupName
+                        </td>
+                        <td>
+                            <button type="button" id="btnSync" gid="@group.GroupId" class="btn btn-primary" data-toggle="modal">Sync Users</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnSync").click(function () {
+                $('#pModal').modal('show');
+                var gid = $(this).attr('gid');
+                $.post(
+                    '/Profile/SyncProfiles?groupId=' + gid,
+                    function (data) {
+                        $('#pModal').modal('hide');
+                    });
+
+            });
+        });
+    </script>
+</div>
+<div id="pModal" class="modal modal-static fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="text-center">
+                    <img src="~/Content/Images/ajax-loader.gif" alt="Processing..." />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
