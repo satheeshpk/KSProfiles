@@ -42,7 +42,7 @@
                             @group.GroupName
                         </td>
                         <td>
-                            <button type="button" id="btnSync" gid="@group.GroupId" class="btn btn-primary" data-toggle="modal">Sync Users</button>
+                            <button type="button" id="btnSync" gid="@group.GroupId" class="btnsync btn btn-primary" data-toggle="modal">Sync Users</button>
                         </td>
                     </tr>
                 }
@@ -54,25 +54,27 @@
             $("#stxt").hide();
             $("#etxt").hide();
 
-            $("#btnSync").click(function () {
-                $('#pModal').modal('show');
-                var gid = $(this).attr('gid');
-                $.ajax({
-                    type: 'POST',
-                    dataType: 'text',
-                    data: '',
-                    url: '/Profile/SyncProfiles?groupId=' + gid,
-                    success: function (data, textStatus) {
-                        $('#pModal').modal('hide');
-                        $("#stxt").show();
-                        $("#etxt").hide();
-                    },
-                    error: function (xhr, textStatus, errorThrown) {
-                        $('#pModal').modal('hide');
-                        $("#stxt").hide();
-                        $("#etxt").show();
-                        console.log(xhr);
-                    }
+            $(".btnsync").each(function () {
+                $(this).click(function () {
+                    $('#pModal').modal('show');
+                    var gid = $(this).attr('gid');
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'text',
+                        data: '',
+                        url: '/Profile/SyncProfiles?groupId=' + gid,
+                        success: function (data, textStatus) {
+                            $('#pModal').modal('hide');
+                            $("#stxt").show();
+                            $("#etxt").hide();
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            $('#pModal').modal('hide');
+                            $("#stxt").hide();
+                            $("#etxt").show();
+                            console.log(xhr);
+                        }
+                    });
                 });
             });
         });
