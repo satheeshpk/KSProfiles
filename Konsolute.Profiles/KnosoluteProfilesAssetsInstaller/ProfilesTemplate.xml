@@ -138,13 +138,13 @@
       <pnp:TermGroups>
         <pnp:TermGroup Name="Konsolute" ID="4F91D466-B2E3-4852-BDDC-D2D6F2343D9C">
           <pnp:TermSets>
-            <pnp:TermSet Name="Departments" ID="B0281683-DA52-4FF9-A530-B1C418D589A7" Language="1033">
+            <pnp:TermSet Name="Departments" ID="80D48CBB-6F37-4C85-8AD7-3AA9BB008606" Language="1033">
               <pnp:Terms>
-                <pnp:Term Name="Finance" ID="93E9B6C2-EB13-4C83-8B21-AA25249BC68B">
+                <pnp:Term Name="Finance" ID="F27BC639-8C63-4EF1-80B7-5D6EAC07D4C3">
                 </pnp:Term>
-                <pnp:Term Name="Information Technology" ID="B9945F6E-76F2-42C7-BDD8-3FEB22B5E5AE">
+                <pnp:Term Name="Information Technology" ID="90DD88FD-3338-415D-8FEA-CBFDED51E9B3">
                 </pnp:Term>
-                <pnp:Term Name="Engineering" ID="2EA1240D-B173-42F9-84DA-1F494035DD18">
+                <pnp:Term Name="Engineering" ID="31A2CAE6-9679-42D3-B297-C7B65FC8B7A4">
                 </pnp:Term>
               </pnp:Terms>
             </pnp:TermSet>

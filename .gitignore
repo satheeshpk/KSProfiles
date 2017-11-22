@@ -6,3 +6,6 @@ _ReSharper.*
 bin
 obj
 packages
+/Konsolute.Profiles/.vs
+/Konsolute.Profiles/Item_KSL_Profile.js
+/Konsolute.Profiles/Konsolute.Profiles.Web/Properties/PublishProfiles

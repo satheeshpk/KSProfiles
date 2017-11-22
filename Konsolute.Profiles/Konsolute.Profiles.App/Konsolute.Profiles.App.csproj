@@ -21,6 +21,7 @@
     <WorkflowPartId>{a22939d9-f114-4a22-96b1-57bcf20f512d}</WorkflowPartId>
     <CspkgPartId>{b4057fca-ec0a-4864-80e0-e8c605ee1019}</CspkgPartId>
     <SqlPackagePartId>{12f32d06-3332-4435-b327-d31558f1e024}</SqlPackagePartId>
+    <ActivePublishProfile>KSProfiles - Web Deploy</ActivePublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

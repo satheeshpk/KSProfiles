@@ -11,17 +11,22 @@ $(document).ready(function () {
                 $("#plist").empty();
                 var res = data;
                 var content = '';
-                for (var i = 0; i < res.length; i++) {
-                    content += '<tr>';
-                    content += '<td id="td' + i + '">' + res[i].DisplayName + '</td>';
-                    content += '<td id="tf' + i + '">' + res[i].FirstName + '</td>';
-                    content += '<td id="tl' + i + '">' + res[i].LastName + '</td>';
-                    content += '<td id="te' + i + '">' + res[i].EmailAddress + '</td>';
-                    content += '<td id="tdp' + i + '">' + res[i].Department + '</td>';
+                if (res.length > 0) {
+                    for (var i = 0; i < res.length; i++) {
+                        content += '<tr>';
+                        content += '<td id="td' + i + '">' + res[i].DisplayName + '</td>';
+                        content += '<td id="tf' + i + '">' + res[i].FirstName + '</td>';
+                        content += '<td id="tl' + i + '">' + res[i].LastName + '</td>';
+                        content += '<td id="te' + i + '">' + res[i].EmailAddress + '</td>';
+                        content += '<td id="tdp' + i + '">' + res[i].Department + '</td>';
 
-                    var eb = "<input type='button' value='Edit' class='btn btn-primary' onclick='openEdit(&quot;" + res[i].UserId + "&quot;,&quot;" + i + "&quot;)' />";
-                    content += "<td id='bt" + i + "'>" + eb + "</td>";
-                    content += '</tr>';
+                        var eb = "<input type='button' value='Edit' class='btn btn-primary' onclick='openEdit(&quot;" + res[i].UserId + "&quot;,&quot;" + i + "&quot;)' />";
+                        content += "<td id='bt" + i + "'>" + eb + "</td>";
+                        content += '</tr>';
+                    }
+                }
+                else {
+                    content += '<tr><td colspan="6" class="text- info text- center">No profiles to display for search.</td></tr>';
                 }
 
                 $("#plist").html(content);
